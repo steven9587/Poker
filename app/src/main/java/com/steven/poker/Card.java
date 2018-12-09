@@ -9,6 +9,19 @@ public class Card {
     }
 
     public String getCard() {
-        return suits[value / 13] + " " + (value % 13 + 1);
+        switch (value % 13 + 1) {
+            case 1:
+                return suits[value / 13] + "  A";
+            case 10:
+                return suits[value / 13] + "" + (value % 13 + 1);
+            case 11:
+                return suits[value / 13] + "  J";
+            case 12:
+                return suits[value / 13] + "  Q";
+            case 13:
+                return suits[value / 13] + "  K";
+            default:
+                return suits[value / 13] + "  " + (value % 13 + 1);
+        }
     }
 }

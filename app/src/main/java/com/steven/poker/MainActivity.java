@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public PokerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new PokerHolder(getLayoutInflater().inflate(R.layout.poker_row , parent , false));
+            View view = getLayoutInflater().inflate(R.layout.poker_row , parent , false);
+            return new PokerHolder(view);
         }
 
         @Override
